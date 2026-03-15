@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -511,12 +511,12 @@ input[type=range].wol-sl::-moz-range-thumb{width:16px;height:16px;border-radius:
    ⚙️  KONFIGURATION
 ═══════════════════════════════════════════ */
 const SUPABASE_URL  = 'https://rdfpytvhpxgorjtamixk.supabase.co';
-const SUPABASE_ANON = 'DEIN_VOLLSTAENDIGER_PUBLISHABLE_KEY'; // aus Supabase → Project Settings → API
+const SUPABASE_ANON = 'HIER_DEINEN_VOLLSTAENDIGEN_PUBLISHABLE_KEY_EINFUEGEN';
 
 /* ═══════════════════════════════════════════
    SUPABASE
 ═══════════════════════════════════════════ */
-const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
 /* ═══════════════════════════════════════════
    CONSTANTS
